@@ -24,6 +24,10 @@ sans-serif;
     color: #fff;
 }
 
+p + p {
+    text-indent: 0;
+}
+
 
 /* COL */
 
@@ -96,7 +100,7 @@ p {
     position: fixed;
     background: #fff;
     z-index: 1000000;
-    @include phone {
+    @include tablet {
         height: 100px;
     }
     &__logo {
@@ -114,9 +118,7 @@ p {
             background-size: 300px;
         }
         @include tablet {
-            margin: 0 $paddingTablet;
-        }
-        @include phone {
+
             margin: 0 $paddingPhone;
             width: 200px;
             height: 100px;
@@ -188,7 +190,7 @@ p {
         line-height: 40px;
         padding-top:55px;
         color:$key;
-        @include phone {
+        @include tablet {
             font-size: 20px;
             line-height: 20px;
             padding-top: 40px;
@@ -211,6 +213,7 @@ p {
     top: 110px;
     @include tablet {
         display: block;
+        top:80px;
     }
     @include phone {
         top: 80px;
@@ -240,12 +243,12 @@ p {
 
 .banner {
     position: relative;
-    padding: $paddingDefault;
+    padding: 0 $paddingDefault;
     @include desktop {
-        padding: $paddingDesktop;
+        padding: 0 $paddingDesktop;
     }
     @include tablet {
-        padding: $paddingTablet;
+        padding: 0 $paddingTablet;
     }
     @include phone {
         padding: 0;
@@ -273,7 +276,7 @@ p {
     }
     p {
         max-width: $copyWidth;
-        margin: $paddingDesktop auto;
+        margin: $paddingDesktop auto 0 auto;
         text-align: center;
         padding: 0 $paddingPhone;
     }
@@ -559,6 +562,14 @@ p {
     }
 }
 
+.downPage {
+    padding-top: 150px;
+    @include tablet {
+        padding-top: 100px;
+    }
+}
+
+
 .sub {
     .toggle--mobile {
         color: #fff;
@@ -613,7 +624,7 @@ p {
     }
     .downPage {
         padding-top: 150px;
-        @include phone {
+        @include tablet {
             padding-top: 100px;
         }
         span {
@@ -639,22 +650,152 @@ p {
         }
         &__content {
             max-width: 1280px;
+            min-height: 400px;
+            @include tablet {
+                min-height: 300px;
+            }
             margin: 0 auto;
             overflow: hidden;
         }
         &__copy {
-            position:relative;
-            margin-right:500px;
+            position: relative;
+            margin-right: 380px;
+            @include tablet {
+                margin-right: 250px;
+            }
+            @include phone {
+                margin: 0;
+            }
             h2 {
                 @extend .typl8-mega;
                 font-family: "Gotham Bold";
             }
         }
-        &__sidebar {
+        &__dropdown {
             float: right;
-            min-height: 400px;
-            background:red;
-            width: 400px;
+            width: 360px;
+            margin-bottom: $paddingDefault;
+            @include tablet {
+                width: 240px;
+            }
+            @include phone {
+                width: 100%;
+                float: none;
+            }
+            h3 {
+                border: 1px solid #A7A9AC;
+                border-width: 1px 0;
+                @extend .typl8-gamma;
+                font-family: "Gotham Light";
+                font-size: .75rem;
+                padding: 1rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                position: relative;
+                margin-bottom: 0 0 .5rem 0;
+                span {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    height: 1.25rem;
+                    width: 1.25rem;
+                    top: .75rem;
+                    right: .75rem;
+                    border: 1px solid #A7A9AC;
+                    text-align: center;
+                    font-weight: lighter;
+                    line-height: 1.25rem;
+                    font-size: .5rem;
+                }
+            }
+            p {
+                @extend .typl8-gamma;
+                font-family: "Gotham Light";
+                font-size: .75rem;
+                padding: 0;
+                line-height: 1.5rem;
+            }
+            ul {
+                li {
+                    a {
+                        @extend .typl8-gamma;
+                        font-family: "Gotham Light";
+                        font-size: .75rem;
+                        padding: 0 1rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+        &__personnel {
+            display: flex;
+            flex-wrap: wrap;
+            .col {
+                flex-grow: 1;
+                width: calc(50%);
+                background-size: contain;
+                background-position: top center;
+                background-repeat: no-repeat;
+                @include phone {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include phone {
+                        margin-bottom: 20px;
+                    }
+                }
+                h2 {
+                    @extend .typl8-giga;
+                    font-family: "Gotham Bold";
+                    padding: 20px 20px 0 20px;
+                    margin-bottom: 50px;
+                }
+                .article__dropdown {
+                    width: 100%;
+                    padding-left: 20px;
+                    margin-bottom: 20px;
+                    @include phone {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contentGrid {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+        flex-grow: 1;
+        width: calc(100% / 4);
+        @include tablet {
+            width: calc(100% / 2);
+        }
+        @include phone {
+            width: 100%;
+        }
+        &__wrap {
+            display: block;
+            border: 1px solid #222;
+            width: 90%;
+            margin: 5% 0;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            span {
+                display: block;
+                @extend .typl8-gamma;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: .8rem;
+                padding: 10px;
+                font-family: "Gotham Light";
+            }
         }
     }
 }
