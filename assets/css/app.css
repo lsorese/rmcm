@@ -1,0 +1,1112 @@
+@charset "UTF-8";
+/*!
+Typeplate : Starter Kit
+URL ........... http://typeplate.com
+Version ....... 3.0.1
+Github ........ https://github.com/typeplate/starter-kit
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026; }
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C; }
+
+.typl8-tera, .typl8-giga, .h2, .typl8-mega, h1, .typl8-alpha, h2, .toggle--mobile, .news--more, .footer__social, .typl8-beta, h3, p, .news .h2--small, .news .col h3, .clients .h2--small, .footer .h2--small, .typl8-gamma, h4, .header__menu__desktop li a, .options .col h3, .options .col p, .news .col h4,
+.news .col .readMore, .footer__copy p, .typl8-delta, h5, .slicknav_menu .slicknav_nav a, .typl8-epsilon, .typl8-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #222; }
+
+blockquote + figcaption cite {
+  display: block;
+  font-size: inherit;
+  text-align: right; }
+
+body {
+  word-wrap: break-word; }
+
+pre code {
+  word-wrap: normal; }
+
+html {
+  font: normal 112.5%/1.65 serif; }
+
+body {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #444; }
+
+.typl8-tera {
+  font-size: 6.5em;
+  margin-bottom: 3.9393939394rem; }
+
+.typl8-giga, .h2 {
+  font-size: 5em;
+  margin-bottom: 3.0303030303rem; }
+
+.typl8-mega, h1 {
+  font-size: 4em;
+  margin-bottom: 2.4242424242rem; }
+
+.typl8-alpha, h2, .toggle--mobile, .news--more, .footer__social {
+  font-size: 3.3333333333em;
+  margin-bottom: 2.0202020202rem; }
+
+.typl8-beta, h3, p, .news .h2--small, .news .col h3, .clients .h2--small, .footer .h2--small {
+  font-size: 2.6666666667em;
+  margin-bottom: 1.6161616162rem; }
+
+.typl8-gamma, h4, .header__menu__desktop li a, .options .col h3, .options .col p, .news .col h4,
+.news .col .readMore, .footer__copy p {
+  font-size: 2em;
+  margin-bottom: 1.2121212121rem; }
+
+.typl8-delta, h5, .slicknav_menu .slicknav_nav a {
+  font-size: 1.3333333333em;
+  margin-bottom: 0.8080808081rem; }
+
+.typl8-epsilon {
+  font-size: 1.1666666667em;
+  margin-bottom: 0.7070707071rem; }
+
+.typl8-zeta, h6 {
+  font-size: 1em;
+  margin-bottom: 0.6060606061rem; }
+
+p {
+  margin: auto auto 1.5rem; }
+  p + p {
+    text-indent: 1.5rem;
+    margin-top: -1.5rem; }
+
+small {
+  font-size: 65%; }
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+pre {
+  white-space: pre; }
+  pre code {
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap; }
+
+code {
+  white-space: pre;
+  font-family: monospace; }
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  abbr[title]:hover {
+    cursor: help; }
+
+.typl8-drop-cap:first-letter {
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: 0 20px;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
+
+p + .typl8-drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+/**
+ * Lining Definition Style Markup
+ *
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.typl8-lining dt,
+.typl8-lining dd {
+  display: inline;
+  margin: 0; }
+
+.typl8-lining dt + dt:before,
+.typl8-lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+
+.typl8-lining dd + dd:before {
+  content: ", "; }
+
+.typl8-lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.typl8-dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  .typl8-dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+
+.typl8-dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  .typl8-dictionary-style dd:before {
+    content: counter(definitions, decimal) ". "; }
+
+/**
+ * Blockquote Markup
+ *
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.typl8-pull-quote {
+  position: relative;
+  padding: 1em; }
+  .typl8-pull-quote:before, .typl8-pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  .typl8-pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .typl8-pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/*
+ *  Owl Carousel - Core
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+  .owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y; }
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d; }
+  .owl-carousel .owl-nav.disabled,
+  .owl-carousel .owl-dots.disabled {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-loaded {
+    display: block; }
+  .owl-carousel.owl-loading {
+    opacity: 0;
+    display: block; }
+  .owl-carousel.owl-hidden {
+    opacity: 0; }
+  .owl-carousel.owl-refresh .owl-item {
+    visibility: hidden; }
+  .owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .owl-carousel.owl-rtl {
+    direction: rtl; }
+  .owl-carousel.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out; }
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms ease;
+  transition: -webkit-transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      -webkit-transition: opacity 200ms ease;
+      transition: opacity 200ms ease;
+      border-radius: 30px; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: #869791; }
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.woff2") format("woff2"), url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanova-semibold-webfont.svg#proxima_novasemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url("../../assets/fonts/proxima-nova/proximanova-light-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanova-light-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanova-light-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanova-light-webfont.svg#proxima_novalight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("../../assets/fonts/proxima-nova/proximanova-regular-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanova-regular-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanova-regular-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_novaregular_italic';
+  src: url("../../assets/fonts/proxima-nova/proximanova-regularitalic-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanova-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanova-regularitalic-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanova-regularitalic-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanova-regularitalic-webfont.svg#proxima_novaregular_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_thinthin';
+  src: url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.woff2") format("woff2"), url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovat-thin-webfont.svg#proxima_nova_thinthin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_condensedlight';
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-light-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovacond-light-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovacond-light-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovacond-light-webfont.svg#proxima_nova_condensedlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_cn_rgregular';
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-regular-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovacond-regular-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovacond-regular-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovacond-regular-webfont.svg#proxima_nova_cn_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_condensedRgIt';
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-regularit-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-regularit-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovacond-regularit-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovacond-regularit-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovacond-regularit-webfont.svg#proxima_nova_condensedRgIt") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_condensedSBd';
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-semibold-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovacond-semibold-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovacond-semibold-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovacond-semibold-webfont.svg#proxima_nova_condensedSBd") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'proxima_nova_cn_ththin';
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.eot");
+  src: url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.woff2") format("woff2"), url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.woff") format("woff"), url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.ttf") format("truetype"), url("../../assets/fonts/proxima-nova/proximanovacond-thin-webfont.svg#proxima_nova_cn_ththin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.proxima-nova {
+  font-family: "proxima_nova_rgregular"; }
+
+.proxima-nova-bold {
+  font-family: "proxima_nova_rgbold"; }
+
+.proxima-nova-semibold {
+  font-family: "proxima_novasemibold"; }
+
+.proxima-nova-thin {
+  font-family: "proxima_nova_thinthin"; }
+
+.proxima-nova-light {
+  font-family: "proxima_novalight"; }
+
+.proxima-nova-italic {
+  font-family: "proxima_novaregular_italic"; }
+
+.proxima-nova-condensed {
+  font-family: "proxima_nova_cn_rgregular"; }
+
+.proxima-nova-condensed-bold {
+  font-family: "proxima_nova_condensedSBd"; }
+
+.proxima-nova-condensed-thin {
+  font-family: "proxima_nova_cn_ththin"; }
+
+.proxima-nova-condensed-light {
+  font-family: "proxima_nova_condensedlight"; }
+
+.proxima-nova-condensed-italic {
+  font-family: "proxima_nova_condensedRgIt"; }
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("../../assets/fonts/gotham/gothamhtf-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/gotham/gothamhtf-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("../../assets/fonts/gotham/gothamhtf-book-webfont.woff2") format("woff2"), url("../../assets/fonts/gotham/gothamhtf-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("../../assets/fonts/gotham/gothamhtf-light-webfont.woff2") format("woff2"), url("../../assets/fonts/gotham/gothamhtf-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url("../../assets/fonts/gotham/gothamhtf-medium-webfont.woff2") format("woff2"), url("../../assets/fonts/gotham/gothamhtf-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Extra-Light';
+  src: url("../../assets/fonts/gotham/gothamhtf-xlight-webfont.woff2") format("woff2"), url("../../assets/fonts/gotham/gothamhtf-xlight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.slicknav_menu {
+  display: none; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  box-sizing: inherit;
+  margin: 0;
+  line-height: 100%;
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+a:hover {
+  opacity: .6; }
+
+img {
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+/* COL */
+.column--2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 1024px) {
+    .column--2 {
+      display: block; } }
+  @media (max-width: 1024px) {
+    .column--2 .col {
+      width: 100%; } }
+
+.column--3 {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 576px) {
+    .column--3 {
+      display: block; } }
+  @media (max-width: 576px) {
+    .column--3 .col {
+      width: 100%; } }
+
+/* BASICS */
+body {
+  font-family: "Gotham Book", "helvetica neue", "helvetica", arial, sans-serif;
+  background: #fff;
+  color: #231F20;
+  font-size: 8px;
+  min-width: 300px; }
+
+.h2 {
+  font-family: "Gotham Extra-Light", "helvetica neue", "helvetica", arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+  .h2--small {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 2px; }
+
+h3 {
+  font-family: "Gotham Bold", "helvetica neue", "helvetica", arial, sans-serif;
+  text-align: left; }
+
+p {
+  font-family: "Gotham Extra-Light", "helvetica neue", "helvetica", arial, sans-serif;
+  font-size: .95rem;
+  line-height: 1.5rem; }
+
+.header {
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 1000000; }
+  @media (max-width: 576px) {
+    .header {
+      height: 100px; } }
+  .header__logo {
+    text-indent: -999999px;
+    float: left;
+    height: 150px;
+    width: 350px;
+    margin: 0 50px;
+    background: transparent url("../images/header--logo.png") no-repeat center center;
+    background-size: 350px auto; }
+    @media (max-width: 1280px) {
+      .header__logo {
+        margin: 0 35px;
+        width: 300px;
+        background-size: 300px; } }
+    @media (max-width: 1024px) {
+      .header__logo {
+        margin: 0 25px; } }
+    @media (max-width: 576px) {
+      .header__logo {
+        margin: 0 20px;
+        width: 200px;
+        background-size: 100% auto;
+        background-position: center left; } }
+  .header__menu {
+    position: relative;
+    margin-left: 450px;
+    text-align: right;
+    padding-right: 50px; }
+    @media (max-width: 576px) {
+      .header__menu {
+        margin-left: 200px; } }
+    @media (max-width: 1280px) {
+      .header__menu {
+        padding-right: 35px;
+        margin-left: 300px; } }
+    @media (max-width: 1024px) {
+      .header__menu {
+        padding-right: 25px; } }
+    @media (max-width: 576px) {
+      .header__menu {
+        padding-right: 20px;
+        margin-left: 0;
+        float: right; } }
+    @media (max-width: 1024px) {
+      .header__menu__desktop {
+        display: none; } }
+    .header__menu__desktop li {
+      margin-top: 65px;
+      display: inline-block;
+      margin-left: 20px; }
+      @media (max-width: 576px) {
+        .header__menu__desktop li {
+          margin-top: 40px; } }
+      @media (max-width: 1280px) {
+        .header__menu__desktop li {
+          margin-left: 10px; } }
+      .header__menu__desktop li a {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: .80rem; }
+        @media (max-width: 1280px) {
+          .header__menu__desktop li a {
+            letter-spacing: 1px;
+            font-size: .75rem; } }
+    @media (max-width: 1024px) {
+      .header__menu__mobile {
+        display: block; } }
+
+.toggle--mobile {
+  display: none;
+  line-height: 40px;
+  padding-top: 55px;
+  color: #231F20; }
+  @media (max-width: 1024px) {
+    .toggle--mobile {
+      display: block; } }
+  @media (max-width: 576px) {
+    .toggle--mobile {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 65px; } }
+  .toggle--mobile span {
+    margin: 0 0 0 5px;
+    font: 30px/20px "Gotham Book", "helvetica neue", "helvetica", arial, sans-serif;
+    display: none; }
+
+.slicknav_menu {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.98);
+  width: 100%;
+  z-index: 1000000;
+  top: 110px; }
+  @media (max-width: 1024px) {
+    .slicknav_menu {
+      display: block; } }
+  .slicknav_menu .slicknav_nav a {
+    display: block;
+    margin: 0 !important;
+    color: #231F20;
+    line-height: 1.5rem;
+    border-radius: 0;
+    text-align: right; }
+    @media (max-width: 1024px) {
+      .slicknav_menu .slicknav_nav a {
+        padding-right: 25px; } }
+    @media (max-width: 576px) {
+      .slicknav_menu .slicknav_nav a {
+        padding-right: 20px; } }
+    .slicknav_menu .slicknav_nav a:hover {
+      background-color: #eee; }
+  .slicknav_menu .slicknav_btn {
+    display: none; }
+
+.banner {
+  top: 150px;
+  position: relative;
+  padding: 50px; }
+  @media (max-width: 1280px) {
+    .banner {
+      padding: 35px; } }
+  @media (max-width: 1024px) {
+    .banner {
+      padding: 25px; } }
+  @media (max-width: 576px) {
+    .banner {
+      padding: 20px; } }
+  .banner img {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.welcome {
+  padding: 20px 0 50px 0; }
+  .welcome h2 {
+    letter-spacing: 2px; }
+  .welcome p {
+    max-width: 600px;
+    margin: 35px auto;
+    text-align: center;
+    padding: 0 20px; }
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent; }
+  @media (max-width: 1024px) {
+    .options {
+      display: block;
+      padding: 50px 0; } }
+  .options .col {
+    color: #fff;
+    padding: 50px; }
+    @media (max-width: 1280px) {
+      .options .col {
+        padding: 35px; } }
+    @media (max-width: 1024px) {
+      .options .col {
+        padding: 25px; } }
+    @media (max-width: 576px) {
+      .options .col {
+        padding: 20px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto; } }
+    .options .col img {
+      float: left;
+      margin-right: 20px;
+      width: 140px; }
+      @media (max-width: 1280px) {
+        .options .col img {
+          width: 40%; } }
+      @media (max-width: 1024px) {
+        .options .col img {
+          max-width: 150px;
+          width: 100%;
+          height: auto;
+          float: none;
+          margin: 0 auto 20px auto; } }
+      @media (max-width: 576px) {
+        .options .col img {
+          width: 100%;
+          max-width: 100%; } }
+    .options .col h3 {
+      margin: 0 0 10px 0;
+      margin-top: 10px;
+      color: #fff;
+      line-height: 1rem; }
+      @media (max-width: 1280px) {
+        .options .col h3 {
+          font-size: .75rem; } }
+    .options .col p {
+      color: #fff;
+      line-height: 1.25rem;
+      margin: 0; }
+      @media (max-width: 1280px) {
+        .options .col p {
+          font-size: .75rem; } }
+
+.news {
+  text-align: center;
+  display: block;
+  padding: 50px 0; }
+  @media (max-width: 1280px) {
+    .news {
+      padding: 35px 0; } }
+  @media (max-width: 1024px) {
+    .news {
+      padding: 25px 0; } }
+  @media (max-width: 576px) {
+    .news {
+      padding: 50px 0; } }
+  .news .h2--small {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gotham Extra-Light", "helvetica neue", "helvetica", arial, sans-serif; }
+    @media (max-width: 576px) {
+      .news .h2--small {
+        font-size: .75rem;
+        line-height: 1.5rem; } }
+  .news .col {
+    text-align: left;
+    padding: 50px; }
+    @media (max-width: 1280px) {
+      .news .col {
+        padding: 35px; } }
+    @media (max-width: 1024px) {
+      .news .col {
+        padding: 25px; } }
+    @media (max-width: 576px) {
+      .news .col {
+        padding: 20px; } }
+    .news .col img {
+      width: 100%;
+      margin-bottom: 20px; }
+    .news .col h4,
+    .news .col .readMore {
+      line-height: 1.5rem; }
+    .news .col .readMore {
+      font-size: .9rem;
+      display: inline-block;
+      border: 1px solid #231F20;
+      padding: 7px 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+      @media (max-width: 1024px) {
+        .news .col .readMore {
+          font-size: .75rem; } }
+  .news--more {
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+    border: 1px solid #231F20;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+    @media (max-width: 1024px) {
+      .news--more {
+        font-size: .95rem; } }
+
+.clients {
+  background: transparent;
+  padding: 50px; }
+  @media (max-width: 576px) {
+    .clients {
+      display: block; } }
+  .clients__slideshow {
+    position: relative; }
+    .clients__slideshow--item {
+      padding: 50px 20px; }
+      .clients__slideshow--item img {
+        margin: 0 auto;
+        width: 80%; }
+  .clients .owl-theme .owl-dots {
+    position: relative;
+    top: -20px; }
+  .clients .owl-theme .owl-dots .owl-dot span {
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+    background: transparent;
+    border-radius: 0; }
+    @media (max-width: 576px) {
+      .clients .owl-theme .owl-dots .owl-dot span {
+        margin: 0 5px;
+        width: 10px;
+        border-width: 2px;
+        height: 10px; } }
+  .clients .owl-theme .owl-dots .owl-dot.active span {
+    background: #fff; }
+  .clients .owl-stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .clients .owl-stage .owl-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  .clients .h2--small {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gotham Extra-Light", "helvetica neue", "helvetica", arial, sans-serif;
+    color: #fff; }
+    @media (max-width: 576px) {
+      .clients .h2--small {
+        font-size: .75rem;
+        line-height: 1.5rem; } }
+
+.footer {
+  padding: 50px;
+  background: #A01F26; }
+  .footer .h2--small {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gotham Extra-Light", "helvetica neue", "helvetica", arial, sans-serif;
+    color: #fff; }
+    @media (max-width: 576px) {
+      .footer .h2--small {
+        font-size: .75rem;
+        line-height: 1.5rem; } }
+  .footer__icons {
+    margin: 50px 0 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 1024px) {
+      .footer__icons {
+        margin-bottom: 50px; } }
+    @media (max-width: 1024px) {
+      .footer__icons {
+        display: block;
+        text-align: center; } }
+  .footer__icon {
+    max-width: 250px; }
+    @media (max-width: 1024px) {
+      .footer__icon {
+        margin: 0 auto 10px auto; } }
+    .footer__icon img {
+      width: 100%;
+      padding: 0 20px; }
+  .footer__copy p {
+    display: block;
+    text-align: center;
+    color: #fff;
+    line-height: 1.5rem; }
+    @media (max-width: 576px) {
+      .footer__copy p {
+        font-size: .65rem; } }
+  .footer__social {
+    text-align: center;
+    color: #fff; }
+    .footer__social a {
+      margin: 0 20px; }
+
+.svg .header__logo {
+  background-image: url("../images/header--logo.svg"); }
