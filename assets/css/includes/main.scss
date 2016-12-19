@@ -92,8 +92,9 @@ p {
 .header {
     height: 150px;
     width: 100%;
+    top: 0;
     position: fixed;
-    background:#fff;
+    background: #fff;
     z-index: 1000000;
     @include phone {
         height: 100px;
@@ -117,6 +118,7 @@ p {
         @include phone {
             margin: 0 $paddingPhone;
             width: 200px;
+            height: 100px;
             background-size: 100% auto;
             background-position: center left;
         }
@@ -188,7 +190,7 @@ p {
         @include phone {
             font-size: 20px;
             line-height: 20px;
-            padding-top: 65px;
+            padding-top: 40px;
         }
         span {
             margin: 0 0 0 5px;
@@ -201,13 +203,16 @@ p {
 .slicknav_menu {
     display: none;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     background: rgba(255, 255, 255, .98);
     width: 100%;
-    z-index: 1000000;
+    z-index: 1000000000;
     top: 110px;
     @include tablet {
         display: block;
+    }
+    @include phone {
+        top: 80px;
     }
     .slicknav_nav a {
         display: block;
@@ -233,7 +238,6 @@ p {
 }
 
 .banner {
-    top:150px;
     position: relative;
     padding: $paddingDefault;
     @include desktop {
@@ -243,7 +247,7 @@ p {
         padding: $paddingTablet;
     }
     @include phone {
-        padding: $paddingPhone;
+        padding: 0;
     }
     img {
         display: block;
@@ -253,7 +257,16 @@ p {
 }
 
 .welcome {
-    padding: 20px 0 50px 0;
+    padding: $paddingDefault 0;
+    @include desktop {
+        padding: $paddingDefault 0;
+    }
+    @include tablet {
+        padding: $paddingTablet 0;
+    }
+    @include phone {
+        padding: $paddingPhone 0;
+    }
     h2 {
         letter-spacing: 2px;
     }
@@ -292,7 +305,7 @@ p {
             margin-right: 20px;
             width: 140px;
             @include desktop {
-                width:40%;
+                width: 40%;
             }
             @include tablet {
                 max-width: 150px;
@@ -302,8 +315,8 @@ p {
                 margin: 0 auto 20px auto;
             }
             @include phone {
-                width:100%;
-                max-width: 100%;
+                width: 100%;
+                max-width: 190px;
             }
         }
         h3 {
@@ -321,7 +334,7 @@ p {
             @extend .typl8-gamma;
             line-height: 1.25rem;
             margin: 0;
-                    @include desktop {
+            @include desktop {
                 font-size: .75rem;
             }
         }
@@ -405,13 +418,29 @@ p {
 .clients {
     background: transparent;
     padding: $paddingDefault;
+    @include desktop {
+        padding: $paddingDesktop;
+    }
+    @include tablet {
+        padding: $paddingTablet;
+    }
     @include phone {
         display: block;
+        padding: $paddingPhone;
     }
     &__slideshow {
         position: relative;
         &--item {
             padding: $paddingDefault 20px;
+            @include desktop {
+                padding: $paddingDesktop 20px;
+            }
+            @include tablet {
+                padding: $paddingTablet 20px;
+            }
+            @include phone {
+                padding: $paddingPhone 20px;
+            }
             img {
                 margin: 0 auto;
                 width: 80%;
@@ -462,6 +491,15 @@ p {
 .footer {
     padding: $paddingDefault;
     background: #A01F26;
+    @include desktop {
+        padding: $paddingDesktop;
+    }
+    @include tablet {
+        padding: $paddingTablet;
+    }
+    @include phone {
+        padding: $paddingPhone;
+    }
     .h2--small {
         text-align: center;
         text-transform: uppercase;
@@ -503,6 +541,7 @@ p {
             color: #fff;
             @extend .typl8-gamma;
             line-height: 1.5rem;
+            margin-bottom: .75rem;
             @include phone {
                 font-size: .65rem;
             }
@@ -511,9 +550,60 @@ p {
     &__social {
         text-align: center;
         @extend .typl8-alpha;
+        margin: 0;
         color: #fff;
         a {
-        	margin:0 20px;
+            margin: 0 20px;
+        }
+    }
+}
+
+.sub {
+    .toggle--mobile {
+        color: #fff;
+        @include tablet {
+            color: #222;
+        }
+    }
+    .head {
+        background-size: cover;
+        background-position: center center;
+        height: 350px;
+        @include tablet {
+            height: auto;
+        }
+    }
+    .header {
+        background: transparent;
+        height: 350px;
+        @include tablet {
+            background: #fff;
+            height: auto;
+        }
+        &__logo {
+            background: transparent url('../images/header--logo--white.png') no-repeat center center;
+            @include phone {
+                background-image: url('../images/header--logo.png')
+            }
+        }
+        &__menu__desktop li a {
+            color: #fff;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, .75);
+        }
+    }
+    .downPage {
+        padding-top: 150px;
+        @include phone {
+            padding-top: 100px;
+        }
+        span {
+            display: none;
+            @include tablet {
+                display: block;
+                padding-bottom: 40%;
+                background-size: cover;
+                background-position: center center;
+            }
         }
     }
 }
