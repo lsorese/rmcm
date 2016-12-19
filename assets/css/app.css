@@ -18,7 +18,7 @@ License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
   src: local("Georgia");
   unicode-range: U+270C; }
 
-.typl8-tera, .typl8-giga, .h2, .typl8-mega, h1, .typl8-alpha, h2, .toggle--mobile, .news--more, .footer__social, .typl8-beta, h3, p, .news .h2--small, .news .col h3, .clients .h2--small, .footer .h2--small, .typl8-gamma, h4, .header__menu__desktop li a, .options .col h3, .options .col p, .news .col h4,
+.typl8-tera, .typl8-giga, .h2, .typl8-mega, h1, .sub .article__copy h2, .typl8-alpha, h2, .toggle--mobile, .news--more, .footer__social, .typl8-beta, h3, p, .news .h2--small, .news .col h3, .clients .h2--small, .footer .h2--small, .typl8-gamma, h4, .header__menu__desktop li a, .options .col h3, .options .col p, .news .col h4,
 .news .col .readMore, .footer__copy p, .typl8-delta, h5, .slicknav_menu .slicknav_nav a, .typl8-epsilon, .typl8-zeta, h6 {
   text-rendering: optimizeLegibility;
   line-height: 1;
@@ -53,7 +53,7 @@ body {
   font-size: 5em;
   margin-bottom: 3.0303030303rem; }
 
-.typl8-mega, h1 {
+.typl8-mega, h1, .sub .article__copy h2 {
   font-size: 4em;
   margin-bottom: 2.4242424242rem; }
 
@@ -663,9 +663,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: inherit;
-  -webkit-transition: .3s;
-  transition: .3s; }
+  color: inherit; }
 
 a:hover {
   opacity: .6; }
@@ -743,6 +741,8 @@ p {
     .header {
       height: 100px; } }
   .header__logo {
+    -webkit-transition: 0s;
+    transition: 0s;
     text-indent: -999999px;
     float: left;
     height: 150px;
@@ -1163,10 +1163,28 @@ p {
       height: auto; } }
 
 .sub .header {
-  background: transparent;
-  height: 350px; }
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  background: transparent; }
+  .sub .header.down {
+    background: white; }
+    .sub .header.down .header__menu__desktop li a {
+      text-shadow: none;
+      color: #222; }
+    .sub .header.down .header__logo {
+      background-image: url("../images/header--logo.png");
+      background-size: 350px auto; }
+      @media (max-width: 1280px) {
+        .sub .header.down .header__logo {
+          background-size: 300px; } }
+      @media (max-width: 576px) {
+        .sub .header.down .header__logo {
+          background-size: 100% auto;
+          background-position: center left; } }
   @media (max-width: 1024px) {
     .sub .header {
+      -webkit-transition: 0s;
+      transition: 0s;
       background: #fff;
       height: auto; } }
   .sub .header__logo {
@@ -1191,6 +1209,32 @@ p {
         padding-bottom: 40%;
         background-size: cover;
         background-position: center center; } }
+
+.sub .article {
+  padding: 50px; }
+  @media (max-width: 1280px) {
+    .sub .article {
+      padding: 50px; } }
+  @media (max-width: 1024px) {
+    .sub .article {
+      padding: 25px; } }
+  @media (max-width: 576px) {
+    .sub .article {
+      padding: 20px; } }
+  .sub .article__content {
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden; }
+  .sub .article__copy {
+    position: relative;
+    margin-right: 500px; }
+    .sub .article__copy h2 {
+      font-family: "Gotham Bold"; }
+  .sub .article__sidebar {
+    float: right;
+    min-height: 400px;
+    background: red;
+    width: 400px; }
 
 .svg .header__logo {
   background: transparent url("../images/header--logo.svg") no-repeat center center; }

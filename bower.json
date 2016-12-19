@@ -39,6 +39,7 @@
     "jquery.stellar": "stellar.js#^0.6.2",
     "parallax.js": "^1.4.2",
     "typeplate-starter-kit": "^3.0.1",
-    "owl.carousel": "owl-carousel2#*"
+    "owl.carousel": "owl-carousel2#*",
+    "waypoints": "jquery-waypoints#^4.0.1"
   }
 }

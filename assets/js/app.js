@@ -21,4 +21,15 @@ $(function() {
             }
         }
     })
+    var waypoints = $('.article').waypoint(function(direction) {
+        if(direction === "down") {
+        $('.header').addClass('down');
+    } else {
+                $('.header').removeClass('down');
+
+    }
+    }, {
+        offset: '150px'
+    })
+
 });

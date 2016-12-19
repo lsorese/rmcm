@@ -100,6 +100,7 @@ p {
         height: 100px;
     }
     &__logo {
+        transition: 0s;
         text-indent: -999999px;
         float: left;
         height: 150px;
@@ -574,9 +575,28 @@ p {
         }
     }
     .header {
+        transition: background-color 200ms linear;
         background: transparent;
-        height: 350px;
+        &.down {
+            background: rgba(255, 255, 255, 1);
+            .header__menu__desktop li a {
+                text-shadow: none;
+                color: #222;
+            }
+            .header__logo {
+                background-image: url('../images/header--logo.png');
+                background-size: 350px auto;
+                @include desktop {
+                    background-size: 300px;
+                }
+                @include phone {
+                    background-size: 100% auto;
+                    background-position: center left;
+                }
+            }
+        }
         @include tablet {
+            transition: 0s;
             background: #fff;
             height: auto;
         }
@@ -604,6 +624,37 @@ p {
                 background-size: cover;
                 background-position: center center;
             }
+        }
+    }
+    .article {
+        padding: $paddingDefault;
+        @include desktop {
+            padding: $paddingDefault;
+        }
+        @include tablet {
+            padding: $paddingTablet;
+        }
+        @include phone {
+            padding: $paddingPhone;
+        }
+        &__content {
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        &__copy {
+            position:relative;
+            margin-right:500px;
+            h2 {
+                @extend .typl8-mega;
+                font-family: "Gotham Bold";
+            }
+        }
+        &__sidebar {
+            float: right;
+            min-height: 400px;
+            background:red;
+            width: 400px;
         }
     }
 }
