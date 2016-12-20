@@ -22,14 +22,38 @@ $(function() {
         }
     })
     var waypoints = $('.article').waypoint(function(direction) {
-        if(direction === "down") {
-        $('.header').addClass('down');
-    } else {
-                $('.header').removeClass('down');
+        if (direction === "down") {
+            $('.header').addClass('down');
+        } else {
+            $('.header').removeClass('down');
 
-    }
+        }
     }, {
         offset: '150px'
-    })
+    });
+
+    jQuery('.article__dropdown h3 span').removeClass('fa-minus');
+    jQuery('.article__dropdown h3 span').addClass('fa-plus');
+    jQuery('.article__dropdown .drop').hide();
+    jQuery('.article__dropdown:first').find('.drop').show();
+    jQuery('.article__dropdown:first').find('.drop').show();
+    jQuery('.article__dropdown:first h3 span').addClass('fa-minus');
+    jQuery('.article__dropdown:first h3 span').removeClass('fa-plus');
+    jQuery('.article__dropdown h3 span').on('click', function(e) {
+        e.preventDefault();
+        $that = $(this);
+        $drop = $that.parent().parent().find('.drop');
+        if ($drop.is(":visible")) {
+            $drop.slideUp();
+            $that.removeClass('fa-minus');
+            $that.addClass('fa-plus');
+
+        } else {
+            $drop.slideDown();
+            $that.addClass('fa-minus');
+            $that.removeClass('fa-plus');
+        }
+    });
+    
 
 });

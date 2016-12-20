@@ -171,6 +171,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/css\/includes\/var.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/var.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/fonts\/gotham\/gothamhtf-bold-demo.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -612,42 +625,6 @@
 		"oAP": "\/assets\/images\/banner-one.jpg",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/assets\/images\/header--logo--white.png": {
-		"ft": 32768,
-		"iS": 9528,
-		"oA": 0,
-		"oAP": "\/assets\/images\/header--logo--white.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/images\/header--logo--white.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/images\/header--logo--white.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/images\/header--logo.png": {
-		"ft": 32768,
-		"iS": 5526,
-		"oA": 0,
-		"oAP": "\/assets\/images\/header--logo.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/images\/header--logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/images\/header--logo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/assets\/images\/icon--complex.jpg": {
 		"ft": 16384,

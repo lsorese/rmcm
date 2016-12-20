@@ -9,5 +9,8 @@
         		background-image: url('../images/header--logo.svg');
         	}
         }
+        .header.down .header__logo {
+            background: transparent url('../images/header--logo.svg') no-repeat center center;
+        }
     }
 }

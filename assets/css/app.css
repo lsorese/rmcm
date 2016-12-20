@@ -486,6 +486,13 @@ p + .typl8-drop-cap {
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
       background: #869791; }
 
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+p + p {
+  text-indent: 0; }
+
 @font-face {
   font-family: 'proxima_nova_rgbold';
   src: url("../../assets/fonts/proxima-nova/proximanova-bold-webfont.eot");
@@ -675,13 +682,6 @@ img {
   padding: 0;
   border: 0; }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #fff; }
-
-p + p {
-  text-indent: 0; }
-
 /* COL */
 .column--2 {
   display: -webkit-box;
@@ -748,14 +748,14 @@ p {
     transition: 0s;
     text-indent: -999999px;
     float: left;
-    height: 150px;
+    height: 80px;
     width: 350px;
-    margin: 0 50px;
+    margin: 35px 50px;
     background: transparent url("../images/header--logo.png") no-repeat center center;
     background-size: 350px auto; }
     @media (max-width: 1280px) {
       .header__logo {
-        margin: 0 35px;
+        margin: 35px 35px;
         width: 300px;
         background-size: 300px; } }
     @media (max-width: 1024px) {
@@ -1368,3 +1368,6 @@ p {
   @media (max-width: 1024px) {
     .svg .sub .header__logo {
       background-image: url("../images/header--logo.svg"); } }
+
+.svg .sub .header.down .header__logo {
+  background: transparent url("../images/header--logo.svg") no-repeat center center; }

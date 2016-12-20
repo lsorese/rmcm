@@ -1,0 +1,30 @@
+$paddingDefault: 50px;
+$paddingDesktop: 35px;
+$paddingTablet: 25px;
+$paddingPhone: 20px;
+$key: #231F20;
+$copyWidth: 600px;
+$gothamBook: "Gotham Book",
+"helvetica neue",
+"helvetica",
+arial,
+sans-serif;
+$gothamLight: "Gotham Extra-Light",
+"helvetica neue",
+"helvetica",
+arial,
+sans-serif;
+$gothamBold: "Gotham Bold",
+"helvetica neue",
+"helvetica",
+arial,
+sans-serif;
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+
+p + p {
+    text-indent: 0;
+}
+
