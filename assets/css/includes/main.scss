@@ -1,5 +1,5 @@
-
 /* COL */
+
 .column {
     &--2 {
         display: flex;
@@ -72,6 +72,10 @@ p {
     @include tablet {
         height: 100px;
     }
+    &__wrap {
+        max-width:1680px;
+        margin:0 auto;
+    }
     &__logo {
         transition: 0s;
         text-indent: -999999px;
@@ -79,15 +83,16 @@ p {
         height: 80px;
         width: 350px;
         margin: 35px $paddingDefault;
-        background: transparent url('../images/header--logo.png') no-repeat center center;
+        background: transparent url('../images/header--logo.png') no-repeat left center;
         background-size: 350px auto;
+        position: relative;
+        z-index: 9999999;
         @include desktop {
             margin: 35px $paddingDesktop;
             width: 300px;
-            background-size: 300px;
+            background-size: contain;
         }
         @include tablet {
-
             margin: 0 $paddingPhone;
             width: 200px;
             height: 100px;
@@ -174,18 +179,21 @@ p {
 
 .slicknav_menu {
     display: none;
-    padding: 10px;
+    padding: 0;
     position: fixed;
     background: rgba(255, 255, 255, .98);
     width: 100%;
     z-index: 1000000000;
-    top: 110px;
+    top: 120px;
     @include tablet {
         display: block;
-        top:80px;
+        top: 100px;
     }
     @include phone {
-        top: 80px;
+        top: 100px;
+    }
+    .slicknav_nav {
+        padding: 10px;
     }
     .slicknav_nav a {
         display: block;
@@ -211,6 +219,8 @@ p {
 }
 
 .banner {
+    max-width: 1680px;
+    margin: 0 auto;
     position: relative;
     padding: 0 $paddingDefault;
     @include desktop {
@@ -235,12 +245,13 @@ p {
         padding: $paddingDefault 0;
     }
     @include tablet {
-        padding: $paddingTablet 0;
+        padding: $paddingDefault 0;
     }
     @include phone {
-        padding: $paddingPhone 0;
+        padding: $paddingTablet 0;
     }
     h2 {
+        margin: 0;
         letter-spacing: 2px;
     }
     p {
@@ -248,6 +259,15 @@ p {
         margin: $paddingDesktop auto 0 auto;
         text-align: center;
         padding: 0 $paddingPhone;
+        @include tablet {
+            margin-top: $paddingTablet;
+        }
+        @include phone {
+            max-width: 400px;
+            margin: $paddingPhone auto 0 auto;
+            font-size: .85rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
@@ -256,7 +276,11 @@ p {
     background: transparent;
     @include tablet {
         display: block;
-        padding: $paddingDefault 0;
+        padding: $paddingTablet 0;
+    }
+    @include phone {
+        display: block;
+        padding: $paddingPhone 0;
     }
     .col {
         color: #fff;
@@ -326,6 +350,12 @@ p {
     }
     @include phone {
         padding: $paddingDefault 0;
+    }
+    .column--2 {
+        align-items: center;
+        justify-content: center;
+        max-width: 1680px;
+        margin: 0 auto;
     }
     .h2--small {
         text-align: center;
@@ -538,7 +568,6 @@ p {
     }
 }
 
-
 .sub {
     .toggle--mobile {
         color: #fff;
@@ -567,7 +596,7 @@ p {
                 background-image: url('../images/header--logo.png');
                 background-size: 350px auto;
                 @include desktop {
-                    background-size: 300px;
+                    background-size: contain;
                 }
                 @include phone {
                     background-size: 100% auto;
@@ -581,7 +610,7 @@ p {
             height: auto;
         }
         &__logo {
-            background: transparent url('../images/header--logo--white.png') no-repeat center center;
+            background: transparent url('../images/header--logo--white.png') no-repeat left center;
             @include phone {
                 background-image: url('../images/header--logo.png')
             }
@@ -607,6 +636,8 @@ p {
         }
     }
     .article {
+        max-width: 1280px;
+        margin: 0 auto;
         padding: $paddingDefault;
         @include desktop {
             padding: $paddingDefault;
@@ -712,7 +743,8 @@ p {
                     width: 100%;
                     height: auto;
                     @include phone {
-                        margin-bottom: 20px;
+                        max-width: 300px;
+                        margin: 20px auto 20px auto;
                     }
                 }
                 h2 {
