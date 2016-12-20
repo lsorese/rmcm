@@ -450,6 +450,10 @@ p {
             }
         }
     }
+    .owl-carousel {
+        max-width:1680px;
+        margin:0 auto;
+    }
     .owl-theme .owl-dots {
         position: relative;
         top: -20px;
@@ -636,7 +640,7 @@ p {
         }
     }
     .article {
-        max-width: 1280px;
+        max-width: 1680px;
         margin: 0 auto;
         padding: $paddingDefault;
         @include desktop {
@@ -649,7 +653,7 @@ p {
             padding: $paddingPhone;
         }
         &__content {
-            max-width: 1280px;
+            max-width: 1680px;
             min-height: 400px;
             @include tablet {
                 min-height: 300px;
