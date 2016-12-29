@@ -1,0 +1,8 @@
+.sidebar {
+  float: right;
+  width: calc(100%/3);
+  min-width: 360px; }
+  .sidebar--left {
+    padding-left: 0;
+    padding-right: 20px;
+    float: left; }

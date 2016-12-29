@@ -2,8 +2,31 @@
 @import '../../bower_components/owl.carousel/src/scss/owl.carousel';
 @import '../../bower_components/owl.carousel/src/scss/owl.theme.default';
 
+// RESET AND FONTS
 @import 'includes/var';
-@import 'includes/fonts';
 @import 'includes/mixin';
+@import 'includes/fonts';
+
+// BASICS
+@import 'includes/grid';
 @import 'includes/main';
+@import 'includes/article';
+
+// STRUCTURE
+@import 'includes/header';
+@import 'includes/mo-header';
+@import 'includes/footer';
+
+// HOME
+@import 'includes/home';
+@import 'includes/banner';
+@import 'includes/clients';
+
+// MODULES
+@import 'includes/sidebar';
+@import 'includes/taxonomy';
+@import 'includes/dropdown';
+
+// SPECIFICS
+@import 'includes/sub';
 @import 'includes/svg';

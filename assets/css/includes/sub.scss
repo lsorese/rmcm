@@ -1,0 +1,78 @@
+.sub {
+    .toggle--mobile {
+        color: #fff;
+        @include tablet {
+            color: #222;
+        }
+    }
+    .head {
+        position: relative;
+        background-size: cover;
+        background-position: top left;
+        padding-top: 20%;
+        overflow: hidden;
+        @include desktop {
+            padding-top: 25%;
+        }
+        @include tablet {
+            height: auto;
+            padding: 0;
+        }
+    }
+    .header {
+        transition: background-color 200ms linear;
+        background: transparent;
+        &.down {
+            background: rgba(255, 255, 255, 1);
+            .header__menu__desktop li a {
+                text-shadow: none;
+                color: #222;
+            }
+            .header__logo {
+                background-image: url('../images/header--logo.png');
+                background-size: 350px auto;
+                @include desktop {
+                    background-size: contain;
+                }
+                @include phone {
+                    background-size: 100% auto;
+                    background-position: center left;
+                }
+            }
+        }
+        @include tablet {
+            transition: 0s;
+            background: #fff;
+            height: auto;
+        }
+        &__logo {
+            background: transparent url('../images/header--logo--white.png') no-repeat left center;
+            @include phone {
+                background-image: url('../images/header--logo.png')
+            }
+        }
+        &__menu__desktop li a {
+            color: #fff;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, .75);
+        }
+    }
+    .stub {
+        padding-top: 150px;
+        @include tablet {
+            padding-top: 100px;
+        }
+        span {
+            display: none;
+            @include tablet {
+                display: block;
+                padding-bottom: 40%;
+                background-size: cover;
+                background-position: 30% 50%;
+            }
+                @include phone {
+                    min-height: 200px;
+                }
+
+        }
+    }
+}

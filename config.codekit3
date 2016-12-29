@@ -106,6 +106,68 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/css\/css\/sidebar.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/assets\/css\/css\/sidebar-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/assets\/css\/includes\/article.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/article.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/banner.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/banner.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/clients.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/clients.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/dropdown.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/dropdown.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/css\/includes\/fonts.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -115,6 +177,58 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/css\/css\/fonts.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/footer.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/home.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/home.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -145,6 +259,45 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/css\/includes\/mo-header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/mo-header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/sidebar.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/sidebar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/sub.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/sub.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/css\/includes\/svg.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -154,6 +307,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/css\/css\/svg.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/css\/includes\/taxonomy.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/css\/taxonomy.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -625,6 +791,114 @@
 		"oAP": "\/assets\/images\/banner-one.jpg",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-BERT-MITCHELL.jpg": {
+		"ft": 16384,
+		"iS": 100114,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-BERT-MITCHELL.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-CHARLES-MICHALEK.jpg": {
+		"ft": 16384,
+		"iS": 94585,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-CHARLES-MICHALEK.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-DAN-CARVALHO.jpg": {
+		"ft": 16384,
+		"iS": 95399,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-DAN-CARVALHO.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-DAWN-DAVIS.jpg": {
+		"ft": 16384,
+		"iS": 94116,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-DAWN-DAVIS.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-IMRAN-ANWAR.jpg": {
+		"ft": 16384,
+		"iS": 98628,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-IMRAN-ANWAR.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-KADE-BAIRD.jpg": {
+		"ft": 16384,
+		"iS": 87279,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-KADE-BAIRD.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-MARISSA-TEMPLE.jpg": {
+		"ft": 16384,
+		"iS": 93377,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-MARISSA-TEMPLE.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-REBECCA-MASTRANGELO.jpg": {
+		"ft": 16384,
+		"iS": 90990,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-REBECCA-MASTRANGELO.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/banners\/Banners-STEVEN-ROGERS.jpg": {
+		"ft": 16384,
+		"iS": 95898,
+		"oA": 0,
+		"oAP": "\/assets\/images\/banners\/Banners-STEVEN-ROGERS.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/header--logo--white.png": {
+		"ft": 32768,
+		"iS": 9528,
+		"oA": 0,
+		"oAP": "\/assets\/images\/header--logo--white.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/header--logo--white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/header--logo--white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/header--logo.png": {
+		"ft": 32768,
+		"iS": 5526,
+		"oA": 0,
+		"oAP": "\/assets\/images\/header--logo.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/header--logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/header--logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/images\/icon--complex.jpg": {
 		"ft": 16384,
@@ -4729,6 +5003,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/personnel.html",
+		"oF": 0
+		},
+	"\/personnel2.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/personnel2.html",
 		"oF": 0
 		},
 	"\/sub.html": {

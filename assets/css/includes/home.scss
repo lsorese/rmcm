@@ -1,0 +1,179 @@
+
+.homeCopy {
+    padding: $paddingDefault 0;
+    @include desktop {
+        padding: $paddingDefault 0;
+    }
+    @include tablet {
+        padding: $paddingDefault 0;
+    }
+    @include phone {
+        padding: $paddingTablet 0;
+    }
+    h2 {
+        margin: 0;
+        letter-spacing: 2px;
+    }
+    p {
+        max-width: $copyWidth;
+        margin: $paddingDesktop auto 0 auto;
+        text-align: center;
+        padding: 0 $paddingPhone;
+        @include tablet {
+            margin-top: $paddingTablet;
+        }
+        @include phone {
+            max-width: 400px;
+            margin: $paddingPhone auto 0 auto;
+            font-size: .85rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+.homeGrid {
+    display: flex;
+    background: transparent;
+    @include tablet {
+        display: block;
+        padding: $paddingTablet 0;
+    }
+    @include phone {
+        display: block;
+        padding: $paddingPhone 0;
+    }
+    .col {
+        color: #fff;
+        padding: $paddingDefault;
+        @include desktop {
+            padding: $paddingDesktop;
+        }
+        @include tablet {
+            padding: $paddingTablet;
+        }
+        @include phone {
+            padding: $paddingPhone;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        img {
+            float: left;
+            margin-right: 20px;
+            width: 140px;
+            @include desktop {
+                width: 40%;
+            }
+            @include tablet {
+                max-width: 150px;
+                width: 100%;
+                height: auto;
+                float: none;
+                margin: 0 auto 20px auto;
+            }
+            @include phone {
+                width: 100%;
+                max-width: 190px;
+            }
+        }
+        h3 {
+            margin: 0 0 10px 0;
+            @extend .typl8-gamma;
+            margin-top: 10px;
+            color: #fff;
+            line-height: 1rem;
+            @include desktop {
+                font-size: .75rem;
+            }
+        }
+        p {
+            color: #fff;
+            @extend .typl8-gamma;
+            line-height: 1.25rem;
+            margin: 0;
+            @include desktop {
+                font-size: .75rem;
+            }
+        }
+    }
+}
+
+.homeNews {
+    text-align: center;
+    display: block;
+    padding: $paddingDefault 0;
+    @include desktop {
+        padding: $paddingDesktop 0;
+    }
+    @include tablet {
+        padding: $paddingTablet 0;
+    }
+    @include phone {
+        padding: $paddingDefault 0;
+    }
+    .column--2 {
+        align-items: center;
+        justify-content: center;
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+    .h2--small {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $gothamLight;
+        @extend .typl8-beta;
+        @include phone {
+            font-size: .75rem;
+            line-height: 1.5rem;
+        }
+    }
+    .col {
+        text-align: left;
+        padding: $paddingDefault;
+        @include desktop {
+            padding: $paddingDesktop;
+        }
+        @include tablet {
+            padding: $paddingTablet;
+        }
+        @include phone {
+            padding: $paddingPhone;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h3 {
+            @extend .typl8-beta;
+        }
+        h4,
+        .readMore {
+            @extend .typl8-gamma;
+            line-height: 1.5rem;
+        }
+        .readMore {
+            font-size: .9rem;
+            display: inline-block;
+            border: 1px solid $key;
+            padding: 7px 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include tablet {
+                font-size: .75rem;
+            }
+        }
+    }
+    &--more {
+        @extend .typl8-alpha;
+        display: block;
+        margin: 0 auto;
+        display: inline-block;
+        border: 1px solid $key;
+        padding: 15px 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include tablet {
+            font-size: .95rem;
+        }
+    }
+}

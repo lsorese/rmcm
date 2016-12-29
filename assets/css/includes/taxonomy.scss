@@ -1,0 +1,35 @@
+
+.taxonomy {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+        flex-grow: 1;
+        width: calc(100% / 4);
+        @include tablet {
+            width: calc(100% / 2);
+        }
+        @include phone {
+            width: 100%;
+        }
+        &__wrap {
+            display: block;
+            border: 1px solid #222;
+            width: 90%;
+            margin: 5% 0;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            span {
+                display: block;
+                @extend .typl8-gamma;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: .8rem;
+                padding: 10px;
+                font-family: "Gotham Light";
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ $(function() {
         e.preventDefault();
         $('.header__menu__desktop ul').slicknav('toggle');
     });
-    $('.options').parallax({ imageSrc: 'assets/images/parallax--building--o.png' });
+    $('.homeGrid').parallax({ imageSrc: 'assets/images/parallax--building--o.png' });
     $('.clients').parallax({ imageSrc: 'assets/images/parallax--building--o.png' });
     $('.clients__slideshow').owlCarousel({
         loop: true,
@@ -34,14 +34,14 @@ $(function() {
         });
     }
 
-    jQuery('.article__dropdown h3 span').removeClass('fa-minus');
-    jQuery('.article__dropdown h3 span').addClass('fa-plus');
-    jQuery('.article__dropdown .drop').hide();
-    jQuery('.article__dropdown:first').find('.drop').show();
-    jQuery('.article__dropdown:first').find('.drop').show();
-    jQuery('.article__dropdown:first h3 span').addClass('fa-minus');
-    jQuery('.article__dropdown:first h3 span').removeClass('fa-plus');
-    jQuery('.article__dropdown h3 span').on('click', function(e) {
+    jQuery('.dropdown h3 span').removeClass('fa-minus');
+    jQuery('.dropdown h3 span').addClass('fa-plus');
+    jQuery('.dropdown .drop').hide();
+    jQuery('.dropdown:first').find('.drop').show();
+    jQuery('.dropdown:first').find('.drop').show();
+    jQuery('.dropdown:first h3 span').addClass('fa-minus');
+    jQuery('.dropdown:first h3 span').removeClass('fa-plus');
+    jQuery('.dropdown h3 span').on('click', function(e) {
         e.preventDefault();
         $that = $(this);
         $drop = $that.parent().parent().find('.drop');

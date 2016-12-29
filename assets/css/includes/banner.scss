@@ -1,0 +1,20 @@
+.banner {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 $paddingDefault;
+    @include desktop {
+        padding: 0 $paddingDesktop;
+    }
+    @include tablet {
+        padding: 0 $paddingTablet;
+    }
+    @include phone {
+        padding: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

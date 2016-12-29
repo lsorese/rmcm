@@ -1,0 +1,79 @@
+
+.clients {
+    background: transparent;
+    padding: $paddingDefault;
+    @include desktop {
+        padding: $paddingDesktop;
+    }
+    @include tablet {
+        padding: $paddingTablet;
+    }
+    @include phone {
+        display: block;
+        padding: $paddingPhone;
+    }
+    &__slideshow {
+        position: relative;
+        &--item {
+            padding: $paddingDefault 20px;
+            @include desktop {
+                padding: $paddingDesktop 20px;
+            }
+            @include tablet {
+                padding: $paddingTablet 20px;
+            }
+            @include phone {
+                padding: $paddingPhone 20px;
+            }
+            img {
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+    }
+    .owl-carousel {
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+    .owl-theme .owl-dots {
+        position: relative;
+        top: -20px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 16px;
+        height: 16px;
+        border: 3px solid #fff;
+        background: transparent;
+        border-radius: 0;
+        @include phone {
+            margin: 0 5px;
+            width: 10px;
+            border-width: 2px;
+            height: 10px;
+        }
+    }
+    .owl-theme .owl-dots .owl-dot.active span {
+        background: #fff;
+    }
+    .owl-stage {
+        display: flex;
+        .owl-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .h2--small {
+        display: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $gothamLight;
+        @extend .typl8-beta;
+        color: #fff;
+        @include phone {
+            font-size: .75rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+

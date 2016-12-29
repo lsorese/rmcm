@@ -1,0 +1,145 @@
+.header {
+    height: 150px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background: #fff;
+    z-index: 1000000;
+    @include tablet {
+        height: 100px;
+    }
+    &__wrap {
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+    &__logo {
+        transition: 0s;
+        text-indent: -999999px;
+        float: left;
+        height: 80px;
+        width: 350px;
+        margin: 35px $paddingDefault;
+        background: transparent url('../images/header--logo.png') no-repeat left center;
+        background-size: 350px auto;
+        position: relative;
+        z-index: 9999999;
+        @include desktop {
+            margin: 35px $paddingDesktop;
+            width: 300px;
+            background-size: contain;
+        }
+        @include tablet {
+            margin: 0 $paddingPhone;
+            width: 200px;
+            height: 100px;
+            background-size: 100% auto;
+            background-position: center left;
+        }
+    }
+    &__menu {
+        position: relative;
+        margin-left: 450px;
+        text-align: right;
+        padding-right: $paddingDefault;
+        @include phone {
+            margin-left: 200px;
+        }
+        @include desktop {
+            padding-right: $paddingDesktop;
+            margin-left: 300px;
+        }
+        @include tablet {
+            padding-right: $paddingTablet;
+        }
+        @include phone {
+            padding-right: $paddingPhone;
+            margin-left: 0;
+            float: right;
+        }
+        &__desktop {
+            @include tablet {
+                display: none;
+            }
+            li {
+                margin-top: 65px;
+                @include phone {
+                    margin-top: 40px
+                }
+                display: inline-block;
+                margin-left: 20px;
+                @include desktop {
+                    margin-left: 10px;
+                }
+                a {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    @extend .typl8-gamma;
+                    font-size: .80rem;
+                    @include desktop {
+                        letter-spacing: 1px;
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+        &__mobile {
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include tablet {
+        right: 0;
+        padding: 20px 20px 0 20px;
+    }
+    @include phone {
+        float: right;
+        top: 105px;
+        bottom: auto;
+        width: 250px;
+    }
+    &__content {
+        max-width: 1680px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        overflow: hidden;
+        @include tablet {
+            padding-left: 300px;
+        }
+        @include phone {
+            padding: 0;
+        }
+    }
+    h2,
+    h3 {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+        color: #fff;
+        margin: 0 0 20px calc(100% / 3 + 20px);
+        font-family: $gothamBold;
+        @extend .typl8-alpha;
+        line-height: auto;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .75);
+        @include tablet {
+            margin-left: 10px;
+        }
+        @include phone {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+    h3 {
+        font-family: $gothamLight;
+        @extend .typl8-beta;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,65 @@
+
+
+.toggle {
+    &--mobile {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+        @extend .typl8-alpha;
+        line-height: 40px;
+        padding-top:55px;
+        color:$key;
+        @include tablet {
+            font-size: 20px;
+            line-height: 20px;
+            padding-top: 40px;
+        }
+        span {
+            margin: 0 0 0 5px;
+            font: 30px/20px $gothamBook;
+            display: none;
+        }
+    }
+}
+
+.slicknav_menu {
+    display: none;
+    padding: 0;
+    position: fixed;
+    background: rgba(255, 255, 255, .98);
+    width: 100%;
+    z-index: 1000000000;
+    top: 120px;
+    @include tablet {
+        display: block;
+        top: 100px;
+    }
+    @include phone {
+        top: 100px;
+    }
+    .slicknav_nav {
+        padding: 10px;
+    }
+    .slicknav_nav a {
+        display: block;
+        margin: 0 !important;
+        color: $key;
+        @extend .typl8-delta;
+        line-height: 1.5rem;
+        border-radius: 0;
+        text-align: right;
+        @include tablet {
+            padding-right: $paddingTablet;
+        }
+        @include phone {
+            padding-right: $paddingPhone;
+        }
+        &:hover {
+            background-color: #eee;
+        }
+    }
+    .slicknav_btn {
+        display: none;
+    }
+}
